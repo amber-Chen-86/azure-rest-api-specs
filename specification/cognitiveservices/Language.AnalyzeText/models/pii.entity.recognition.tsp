@@ -46,6 +46,10 @@ model PiiTaskParameters is PreBuiltTaskParametersLoggingOptOut {
   /** (Optional) request parameter that allows the user to provide synonyms for context words that to enhance pii entity detection. */
   @added(Versions.v2025_05_15_preview)
   entitySynonyms?: EntitySynonyms[];
+
+  /** A parameter to disable entity validation. By default, this parameter will be set to false. Users may specify true to bypass entity validation for their requests.*/
+  @added(Versions.v2025_11_15_preview)
+  disableEntityValidation?: boolean = false;
 }
 
 /** Object that allows the user to provide synonyms for context words that to enhance pii entity detection. */
